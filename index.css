@@ -271,6 +271,9 @@
         .job-title {
             font-size: 1.8rem;  /* Further reduce for mobile, but not too small */
         }
+        .section-header {
+            font-size: 1.8rem;  /* Further reduce for mobile, but not too small */
+        }
     }
 
     @media (max-width: 768px) {
@@ -278,6 +281,9 @@
             font-size: 2.2rem;  /* Reduce but keep readable size */
         }
         .job-title {
+            font-size: 1.5rem;  /* Further reduce for mobile, but not too small */
+        }
+        .section-header {
             font-size: 1.5rem;  /* Further reduce for mobile, but not too small */
         }
     }
@@ -289,6 +295,9 @@
         .job-title {
             font-size: 1.1rem;  /* Further reduce for mobile, but not too small */
         }
+        .section-header {
+            font-size: 1.1rem;  /* Further reduce for mobile, but not too small */
+        }
     }
 
     @media (max-width: 340px) {
@@ -298,10 +307,17 @@
         .job-title {
             font-size: 0.9rem;  /* Further reduce for mobile, but not too small */
         }
+        .section-header {
+            font-size: 0.9rem;  /* Further reduce for mobile, but not too small */
+        }
+
     }
 
     @media (max-width: 340px) {
         .job-title {
+            font-size: 0.7rem;  /* Further reduce for mobile, but not too small */
+        }
+        .section-header {
             font-size: 0.7rem;  /* Further reduce for mobile, but not too small */
         }
     }
