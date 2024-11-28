@@ -4,8 +4,7 @@ body {
     background-color: #f7f7f7;
     color: #333;
     padding-top: 20px;
-    /* Remove overflow:hidden to allow scrolling */
-    overflow: auto;  /* Allow scrolling */
+    overflow: auto; /* Allow scrolling */
 }
 
 /* Container */
@@ -193,12 +192,21 @@ footer {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    .name {
+        font-size: 2.8rem;  /* Slightly smaller, but not too much */
+    }
+}
+
 @media (max-width: 768px) {
     .name {
-        font-size: 2.5rem;
+        font-size: 2.3rem;  /* Reduce but keep readable size */
     }
-    .job-title {
-        font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 2rem;  /* Further reduce for mobile, but not too small */
     }
 }
 
@@ -230,21 +238,23 @@ footer {
     display: inline-flex;
     align-items: center;
     padding: 12px 20px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: transparent; /* Make the background transparent */
+    color: #3498db; /* Text color */
     font-size: 1.2rem;
     font-weight: 600;
+    border: 2px solid #3498db; /* Add border to maintain button shape */
     border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the mirror effect */
     transition: all 0.3s ease;
 }
 
 /* Hover Effect and Button Animation */
 .download-btn:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #3498db; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
     animation: bounce 0.5s infinite alternate;
 }
 
@@ -269,7 +279,7 @@ footer {
 /* Responsive Button Styling */
 @media (max-width: 768px) {
     .download-btn {
-        font-size: 1rem;
-        padding: 10px 16px;
+        font-size: 0.5rem;
+        padding: 7px 13px;
     }
 }
