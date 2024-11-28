@@ -42,6 +42,67 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .name {
+        font-size: 0.4rem; /* Smaller font size for mobile */
+        letter-spacing: 0px; /* Tighten letter-spacing */
+    }
+    .job-title {
+        font-size: 1.25rem; /* Adjust job title for smaller screens */
+    }
+    .download-btn {
+        font-size: 0.9rem; /* Adjust download button size */
+        padding: 8px 14px; /* Adjust padding */
+    }
+}
+
+/* Section Header Styling */
+.section-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #2980b9;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.2s ease-out forwards;
+}
+
+/* Cards Styling */
+.card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.21s ease-out forwards;
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.card-title {
+    color: #2c3e50;
+}
+
+.card-text {
+    color: #7f8c8d;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+}
+
 /* Color Changing Animation */
 @keyframes colorChange {
     0% {
@@ -58,7 +119,7 @@ body {
 /* Responsive Typography */
 @media (max-width: 768px) {
     .name {
-        font-size: 2.5rem; /* Adjust size for smaller screens */
+        font-size: 2rem; /* Adjust size for smaller screens */
     }
 }
 
