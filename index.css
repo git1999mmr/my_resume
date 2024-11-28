@@ -1,0 +1,275 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding-top: 20px;
+    /* Remove overflow:hidden to allow scrolling */
+    overflow: auto;  /* Allow scrolling */
+}
+
+/* Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Name Styling with Typing Effect */
+.name {
+    font-family: 'Cursive', 'Georgia', serif;
+    font-size: 3.5rem;
+    color: #1b4065;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    animation: typing 0.5s steps(100) 0.5s forwards, colorChange 5s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Color Changing Animation */
+@keyframes colorChange {
+    0% {
+        color: #00795d; /* Red */
+    }
+    50% {
+        color: #016615; /* Yellow */
+    }
+    100% {
+        color: #00795d; /* Purple */
+    }
+}
+
+/* Job Title Styling with Pulse Effect */
+.job-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #2980b9;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+}
+
+/* Pulse animation for the job title */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Floating Icons or Elements */
+.floating-icon {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    font-size: 3rem;
+    animation: floatIcons 3s linear infinite;
+    color: #3498db;
+}
+
+@keyframes floatIcons {
+    0% {
+        left: -10%;
+    }
+    50% {
+        left: 110%;
+    }
+    100% {
+        left: -10%;
+    }
+}
+
+/* Section Header Styling */
+.section-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #2980b9;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.2s ease-out forwards;
+}
+
+/* Cards Styling */
+.card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.21s ease-out forwards;
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.card-title {
+    color: #2c3e50;
+}
+
+.card-text {
+    color: #7f8c8d;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Hover effects */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-title:hover {
+    color: #3498db;
+    cursor: pointer;
+}
+
+ul li:hover {
+    color: #2980b9;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+}
+
+/* Animation Definitions */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.5rem;
+    }
+    .job-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Styling for Education Section */
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styling for College Logos */
+.college-logo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+/* Position the button in the top right corner */
+.download-btn-container {
+    position: fixed;
+    top: 20px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    z-index: 1000; /* Ensure the button stays on top of other content */
+}
+
+/* Download Button Styling */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect and Button Animation */
+.download-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: bounce 0.5s infinite alternate;
+}
+
+/* Icon Styling */
+.download-btn i {
+    margin-right: 10px;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Button Styling */
+@media (max-width: 768px) {
+    .download-btn {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
