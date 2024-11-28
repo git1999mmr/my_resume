@@ -27,6 +27,9 @@ body {
     animation: typing 0.5s steps(100) 0.5s forwards, colorChange 5s infinite alternate;
     white-space: nowrap;
     overflow: hidden;
+    word-wrap: break-word; /* Ensure word breaks if necessary */
+    display: inline-block; /* Allow the name to take up as much space as it needs */
+    width: auto; /* Avoid width constraints */
 }
 
 /* Typing animation */
@@ -51,6 +54,14 @@ body {
         color: #00795d; /* Purple */
     }
 }
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.5rem; /* Adjust size for smaller screens */
+    }
+}
+
 
 /* Job Title Styling with Pulse Effect */
 .job-title {
